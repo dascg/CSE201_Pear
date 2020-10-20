@@ -5,10 +5,12 @@ public class Store {
 	public HashMap<String, String> userMap;
 	// ArrayList of Applications
 	public ArrayList<Application> appList;
+	public ArrayList<Application> temp;
 	
 	public Store(){
 		appList = new ArrayList<Application>();
 		userMap = new HashMap<String, String>();
+		temp = new ArrayList<Application>();
 	}
 
 	public boolean view(Application a) {
@@ -36,21 +38,22 @@ public class Store {
 	class Sortbyname implements Comparator<Application>{ 
 		@Override
 		public int compare(Application o1, Application o2) {
-			// TODO Auto-generated method stub
 			return o1.getName().compareTo(o2.getName()); 
 		}
 	}
 	class Sortbynameback implements Comparator<Application>{ 
 		@Override
 		public int compare(Application o1, Application o2) {
-			// TODO Auto-generated method stub
+
 			return o2.getName().compareTo(o1.getName()); 
 		}
 	}
 
-	public void filter() {
-		// TODO Auto-generated method stub
-		
+	public void filter(double price) {
+		for(int i = 0; i < appList.size(); i++) {
+			if(appList.get(i).getPrice() <= price)
+				temp.add(appList.get(i));
+		}
 	}
 	
 
