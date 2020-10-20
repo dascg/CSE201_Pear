@@ -1,12 +1,15 @@
 
 public class User extends Guest {
 	 
-	private String username;
-	private String password;
-	private String email;
+	public String username;
+	public String password;
+	public String email;
 	
-	public User() {
-		
+	public User(String username, String password, String email) {
+		this.username = username;
+		this.password = password;
+		this.email = email;
+		this.ID = 1;
 	}
 	
 	public boolean requestForm(Application a) {
@@ -16,5 +19,6 @@ public class User extends Guest {
 	public boolean comment() {
 		return false;
 	}
+	
 
 }

@@ -1,11 +1,10 @@
 
 public class Guest implements Person{
 
-
+	public int ID = 0;
 	@Override
 	public int checkPrivillege() {
-		// TODO Auto-generated method stub
-		return 0;
+		return ID;
 	}
 
 

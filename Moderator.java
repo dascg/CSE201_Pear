@@ -1,8 +1,12 @@
 
 public class Moderator extends User {
 	
-	public Moderator(){
-		
+	public Moderator(String username, String password, String email) {
+		super(username,password,email);
+		this.username = username;
+		this.password = password;
+		this.email = email;
+		this.ID = 1;
 	}
 	
 	public boolean deleteComment(Comment c) {

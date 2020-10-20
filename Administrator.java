@@ -1,7 +1,12 @@
 
 public class Administrator extends Moderator {
 		
-	public Administrator() {
+	public Administrator(String username, String password, String email) {
+		super(username,password,email);
+		this.username = username;
+		this.password = password;
+		this.email = email;
+		this.ID = 2;
 	
 	}
 	

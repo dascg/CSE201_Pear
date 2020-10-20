@@ -1,5 +1,4 @@
 
 public interface Person {
-		
-	public int checkPrivilege();
+	public int checkPrivillege();
 }
