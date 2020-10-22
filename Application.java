@@ -8,7 +8,7 @@ public class Application {
     private String version;
     private String link;
     private double price;
-
+//constructor for each application
     public Application(String name, String description, String organization,
                        String platform, String version, String link, double price) {
         this.name = name;
@@ -19,7 +19,7 @@ public class Application {
         this.link = link;
         this.price = price;
     }
-
+//getters and setters
     public String getName() {
         return name;
     }
